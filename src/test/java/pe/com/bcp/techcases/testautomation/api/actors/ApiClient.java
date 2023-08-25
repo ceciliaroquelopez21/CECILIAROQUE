@@ -14,7 +14,7 @@ public class ApiClient {
     private Response response;
     private static final String contentType = "application/json";
 
-    @Step
+   /* @Step */
     public void searchPageBy(String url, int pageNumber) {
         SerenityRest.useRelaxedHTTPSValidation();
         Logger.getLogger(this.getClass().getName())
@@ -32,7 +32,7 @@ public class ApiClient {
                 .get(url);
     }
 
-    @Step
+ /* @Step */
     public void validateStatusCode(int statusCode) {
         Logger.getLogger(this.getClass().getName())
                 .log(Level.INFO, "Expected status code >>> {0}", statusCode);
@@ -43,7 +43,7 @@ public class ApiClient {
                 .assertThat().statusCode(statusCode);
     }
 
-    @Step
+  /* @Step */
     public void validatePageValue() {
         int expectedPage = Serenity.sessionVariableCalled("expectedPage");
         Logger.getLogger(this.getClass().getName())
