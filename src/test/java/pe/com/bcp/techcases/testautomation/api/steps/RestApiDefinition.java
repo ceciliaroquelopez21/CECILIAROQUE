@@ -15,7 +15,7 @@ import pe.com.bcp.techcases.testautomation.api.actors.ApiClient;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class RestApiDefinition {
-
+@Step
     ApiClient apiClient;
     String URL = "";
 
